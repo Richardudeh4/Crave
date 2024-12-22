@@ -1,0 +1,26 @@
+[
+    {
+        "name": "biryani",
+        "image": "https://uploads-ssl.webflow.com/6248082014e58d2a19c26cac/624809b049d8067f38befce8_dimg1-p-500.png"
+    },
+    {
+        "name": "south indian",
+        "image": "https://uploads-ssl.webflow.com/6248082014e58d2a19c26cac/624809894278007a0fba4ed3_dimg2-p-500.jpeg"
+    },
+    {
+        "name": "chinese",
+        "image": "https://uploads-ssl.webflow.com/6248082014e58d2a19c26cac/6248096f52abd600b424c4f2_dimg3-p-500.png"
+    },
+    {
+        "name": "burger",
+        "image": "https://uploads-ssl.webflow.com/6248082014e58d2a19c26cac/624809894278007a0fba4ed3_dimg2-p-500.jpeg"
+    },
+    {
+        "name": "tacos",
+        "image": "https://uploads-ssl.webflow.com/6248082014e58d2a19c26cac/624808d40fc1ebfa1a8db7e8_img-p-500.png"
+    },
+    {
+        "name": "buritto",
+        "image": "https://uploads-ssl.webflow.com/6248082014e58d2a19c26cac/624808757fb7c9d4cbb00b04_unsplash_gyt0s3wR1YM-p-500.png"
+    }
+]
