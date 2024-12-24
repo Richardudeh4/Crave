@@ -1,6 +1,6 @@
 import { Tabs } from 'expo-router';
 import React, { useEffect, useState } from 'react';
-import { ActivityIndicator, Platform } from 'react-native';
+import { ActivityIndicator, Platform, View } from 'react-native';
 
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
@@ -23,18 +23,19 @@ if(loading){
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: "black",
-        tabBarInactiveTintColor: "white",
+        tabBarActiveTintColor: "#F60C8B",
+        tabBarInactiveTintColor: "grey",
         tabBarShowLabel:false,
         tabBarStyle: {
-          backgroundColor: "grey",
-          borderRadius: 50,
-          marginBottom: 20, 
+          backgroundColor: "black",
+          marginBottom: 0, 
           overflow: "hidden",
           paddingHorizontal: 20,
           paddingVertical: 12,
-          height: 78,
+          height: 100,
+          width:'100%',
           display: "flex",
+          alignSelf: 'center',
           justifyContent: "space-between",
           alignItems: "center",
           flexDirection: "row",
@@ -47,7 +48,8 @@ if(loading){
           title: 'Home',
           headerShown:false,
           tabBarIcon:({size, color}) => (
-            <Ionicons size={size} name="home" color={color} />
+            <Ionicons size={size} name="home" color={color}/>
+               
           ),
       }}
         />
@@ -55,9 +57,20 @@ if(loading){
         name="menu"
         options={{
           title:'Menu',
-        headerShown:false,
+        headerShown:true,
+        headerLeft: (() => (
+          <View className='w-10 h-10 rounded-full border border-1 border-transparent bg-white flex  flex-col justify-center items-center'>
+            <Ionicons name="arrow-back" onPress={() => {}} size={28} color="black" className='px-12'/>
+          </View>
+        
+        )),
+        headerStyle: {
+          backgroundColor: "grey",
+         },
+         headerTintColor: "black",
+
           tabBarIcon:({size, color}) => (
-            <Ionicons size={size} name="menu" color={color}/>
+            <Ionicons size={30} name="menu" color={color}/>
           ),
      
       }}
@@ -68,7 +81,7 @@ if(loading){
           title: 'Booking',
           headerShown:false,
           tabBarIcon:({size,color}) => (
-            <Feather size={size} name="book-open"  color={color}/>
+            <Feather size={30} name="book-open"  color={color}/>
           ),
      }}
         />
@@ -78,7 +91,7 @@ if(loading){
           title: 'Favorite',
           headerShown:false,
           tabBarIcon:({size,color}) => (
-            <Ionicons size={size} name="heart" color={color}/>
+            <Ionicons size={30} name="heart" color={color}/>
           ),
      }}
         />
@@ -88,7 +101,7 @@ if(loading){
           title: 'Cart',
           headerShown:false,
           tabBarIcon:({size,color}) => (
-            <FontAwesome size={size} name="cart-plus" color={color}/>
+            <FontAwesome size={30} name="cart-plus"  color={color}/>
         ),
      }}
     />

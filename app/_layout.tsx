@@ -41,7 +41,7 @@ export default function RootLayout() {
   return (
     <ClerkProvider tokenCache={tokenCache} publishableKey={publishableKey}>
       <ClerkLoaded>
-      <ThemeProvider value={colorScheme === 'light' ? DarkTheme : DefaultTheme}>
+      <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack screenOptions={{headerShown: false}} >
         <Stack.Screen name="index" options={{ headerShown: false}} />
         {/* <Stack.Screen name="(tabs)/booking" options={{ headerShown:true }} />

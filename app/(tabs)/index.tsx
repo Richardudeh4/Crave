@@ -1,3 +1,4 @@
+import CarouselImages from '@/components/CarouselImages';
 import DiscountBanner from '@/components/DiscountBanner';
 import FoodMenu from '@/components/FoodMenu';
 import MusicGrid from '@/components/MusicGrid';
@@ -9,7 +10,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function HomeScreen() {
     return (
-      <SafeAreaView style={styles.homeContainer}>
+      <View style={styles.homeContainer} className='h-full pt-8'>
         <ScrollView>
         <View style={{ display:'flex', 
         flexDirection:'row', 
@@ -96,7 +97,7 @@ export default function HomeScreen() {
       <Text style={{fontSize:22,fontWeight: '500'}}>Today's Special</Text>
       <Text style={{textDecorationLine: "underline",textDecorationColor:"grey",fontSize:18}}>See All</Text>
       </View>
-      <Card className='mt-10'>
+      {/* <Card className='mt-10'>
       <Card.Cover source={{uri: 'https://uploads-ssl.webflow.com/6248082014e58d2a19c26cac/624809b049d8067f38befce8_dimg1-p-500.png'}}/>
         <Card.Title 
         title="Hyderabadi Biryani"
@@ -105,10 +106,11 @@ export default function HomeScreen() {
         subtitleStyle={{fontWeight:"700"}}
         className='mt-3 font-bold'/>
     
-      </Card>
+      </Card> */}
+      <CarouselImages/>
   </View>
   </ScrollView>
-      </SafeAreaView>
+      </View>
     );
 }
 
