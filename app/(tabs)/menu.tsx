@@ -8,6 +8,7 @@ import cart from '@/assets/images/cart.png';
 import { FontAwesome5, Ionicons } from '@expo/vector-icons';
 import PressButton from '@/components/PressButton';
 import { foodCategory } from '@/constants';
+import { Link } from 'expo-router';
 
 
 const buttonItems = [
@@ -42,6 +43,11 @@ const menu = () => {
 
   const renderFoodItem = ({item}) => (
     <TouchableOpacity className="mx-2 gap-3 border-b flex flex-col pt-6 border-gray-100">
+      <Link href={{
+        pathname: "../(foodItem)/details/[id].tsx",
+        params:{id:item.foodName}
+      }}>
+    
       <View className="flex-row items-center flex-1 space-x-[2px]">
         <View className="flex-1 relative h-48 w-28 border justify-center items-center border-black rounded-lg">
           <Image source={item.image} resizeMode="cover" />
@@ -83,6 +89,7 @@ const menu = () => {
           />
         </View>
       </View>
+        </Link>
     </TouchableOpacity>
   );
 

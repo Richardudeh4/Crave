@@ -45,10 +45,11 @@ export default function RootLayout() {
       <ThemeProvider value={NAV_THEME[colorScheme]}>
       <Stack screenOptions={{headerShown: false}} >
         <Stack.Screen name="index" options={{ headerShown: false}} />
-        {/* <Stack.Screen name="(tabs)/booking" options={{ headerShown:true }} />
+        <Stack.Screen name ="(foodItem)/details/[id]" options={{headerShown: true}}/>
+      {/* <Stack.Screen name="(tabs)/booking" options={{ headerShown:true }} />
         <Stack.Screen name="(tabs)/cart" options={{ headerShown: false }} />
-        <Stack.Screen name="(tabs)/favorite" options={{ headerShown: false }} />
-        <Stack.Screen name="(tabs)/menu" options={{ headerShown: false }} /> */}
+        <Stack.Screen name="(tabs)/favorite" options={{ headerShown: false }} /> */}
+        <Stack.Screen name="(tabs)/menu" options={{ headerShown: true }} />
       </Stack>
       </ThemeProvider>
       <StatusBar style="auto"/>
